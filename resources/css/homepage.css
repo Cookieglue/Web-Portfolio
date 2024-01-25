@@ -1,0 +1,42 @@
+:root{
+    --sat1: #F9F5E0;
+    --sat2: #F8E3CA;
+    --sat3: #F8D1B4;
+    --sat4: #F7BF9E;
+    --sat5: #F6AD88;
+    --sat6: #F69B72;
+    --sat7: #F5895C;
+}
+
+#homepagebox{
+
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#mainImage{
+
+    min-width: 30%;
+    width: 30vh;
+
+}
+#name_padding{
+    margin: 3vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#name_padding h1{
+    padding: 0;
+    margin: 1.5vh;
+}
+#name_padding h3{
+    padding: 0;
+    margin: 1vh;
+}
