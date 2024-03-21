@@ -22,8 +22,8 @@
 
 #mainImage{
 
-    min-width: 30%;
-    width: 30vh;
+    min-width: 50%;
+    width: 50vh;
 
 }
 #name_padding{
@@ -39,4 +39,14 @@
 #name_padding h3{
     padding: 0;
     margin: 1vh;
+}
+#web_ring{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#web_ring h4{
+    margin: 5px;
 }

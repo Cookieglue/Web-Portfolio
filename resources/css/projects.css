@@ -29,14 +29,14 @@
 .projectItem{
 
     margin: 2vw;
-    background-color: #F7BF9E;
-    width: 15vw;
-    height: 20vw;
+    background-color: var(--sat3);
+    min-width: 17vw;
+    height: 60vh;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
+    justify-content:flex-start;
+    align-items: center;
     
 
     border-style: solid;
@@ -44,13 +44,20 @@
     border-radius: 1vw;
     border-color: transparent;
 
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 
 }
 .projectItem:hover{
 
-    height: auto;
-    width: 16vw;
+    border-color: var(--sat4);
 
+}
+.projectItem:hover h2{
+
+    font-size:1.6rem;
+    
 }
 
 .projectPhoto{
@@ -62,7 +69,7 @@
     border-style: solid;
     border-width: 4px;
     border-color: transparent;
-    border-bottom-color: #F6AD88;
+    border-bottom-color: var(--sat4);
 }
 .offsetLeft h1{
     padding-right: 75%;
