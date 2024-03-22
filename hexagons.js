@@ -2,28 +2,62 @@ const lifeList = [[]];
 const decayRate = 0.01; // Adjust the decay rate as needed
 const cutoffRate = 2; //Cutoff for hexagon decay
 const initialLife = 0; // Initial life value for hexagons
-const hexSide = 40;
-const influenceRadiusSq = Math.pow((6*hexSide),2); // Radius of influence around the mouse
 
-var canvas = document.getElementById("canvas1");
+var canvas = document.getElementById("hex_canvas");
+var mouseCanvas = document.getElementById("mouse_canvas");
+var header = document.getElementById("header");
+
+//offset to not overlap the header
+var headerOffset = header.offsetHeight;
+var pageHeight = document.body.offsetHeight - headerOffset;
+mouseCanvas.style.top = headerOffset+ "px";
+mouseCanvas.style.height = pageHeight + "px";
+canvas.style.top = headerOffset+ "px";
+canvas.style.height = pageHeight + "px";
+
 var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = pageHeight;
+
+let hexSide = canvas.width/40;
+let influenceRadiusSq = Math.pow((6*hexSide),2); // Radius of influence around the mouse
 
 
 
 let mouseX = 0;
 let mouseY = 0;
+let scroll = -headerOffset;
 
-canvas.addEventListener('mousemove', function(event) {
+mouseCanvas.addEventListener('mousemove', function(event) {
     mouseX = event.clientX;
-    mouseY = event.clientY;
+    mouseY = event.clientY + scroll;
+});
+window.addEventListener("scroll", (event) => {
+    scroll = this.scrollY - headerOffset;
+});
+window.addEventListener('resize', function(event) {
+
+    //offset to not overlap header
+    headerOffset = header.offsetHeight;
+    pageHeight = document.body.offsetHeight - headerOffset;
+    mouseCanvas.style.top = headerOffset+ "px";
+    mouseCanvas.style.height = pageHeight + "px";
+    canvas.style.top = headerOffset+ "px";
+    canvas.style.height = pageHeight + "px";
+
+    // Code to handle screen resolution change
+    canvas.width = window.innerWidth;
+    canvas.height = pageHeight;
+    hexSide = canvas.width/40;
+    influenceRadiusSq = Math.pow((6*hexSide),2);
+
 });
 
 function drawHexagon(x, y, life) {
     if (life <= 0) return;
     // x, y is center
-    ctx.strokeStyle = colorInterpolate('#F9F5E0', '#F7BF9E', life);
+    ctx.strokeStyle = colorInterpolate('#F9F5E0', '#F6AD88', life);
+    ctx.lineWidth = hexSide/20;
     ctx.beginPath();
     ctx.moveTo(x - hexSide / 2, y + hexSide * 0.866);
     ctx.lineTo(x - hexSide, y);
@@ -37,15 +71,15 @@ function drawHexagon(x, y, life) {
 
 function drawHexGrid(originX, originY) {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
-    for (var x = 0; x < window.innerWidth / (1.5 * hexSide); x++) {
+    for (var x = 0; x < canvas.width / (1.5 * hexSide); x++) {
         var offset = x % 2 * 0.866 * hexSide;
         if (lifeList[x] == undefined) {
             lifeList[x] = [];
         }
-        for (var y = 0; y < window.innerHeight / (1.73 * hexSide); y++) {
+        for (var y = 0; y < canvas.height / (1.73 * hexSide); y++) {
 
             if (lifeList[x][y] == undefined) {
-                lifeList[x][y] = initialLife; // Initialize life value
+                lifeList[x][y] = initialLife // Initialize life value
             }
 
             // Update life value based on mouse position
@@ -53,7 +87,6 @@ function drawHexGrid(originX, originY) {
                 originY + 1.73 * hexSide * y + offset]
             let distanceSq = Math.pow(pos[0] - mouseX, 2) + Math.pow((pos[1]+offset) - mouseY, 2);
 
-            //set to 10/x curve
             let saturation = (influenceRadiusSq-cutoffRate*distanceSq)/influenceRadiusSq;
             if(saturation > 1)saturation = 1;
             //dont accidentally decriment
@@ -92,4 +125,29 @@ function colorInterpolate(color1, color2, percent) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
+
+var wavePos = 0;
+
+function openAnimation(){
+    for (var x = 0; x < canvas.width / (1.5 * hexSide); x++) {
+        if (lifeList[x] == undefined) {
+            lifeList[x] = [];
+        }
+        for (var y = 0; y < canvas.height / (1.73 * hexSide); y++) {
+
+            let dist = Math.abs(y-wavePos);
+            let saturation = 1 - dist*cutoffRate*0.1;
+            if(saturation > 1)saturation = 1;
+            
+            lifeList[x][y] = saturation
+            
+
+        }
+    }
+    wavePos+= 2/hexSide;
+    if(wavePos<pageHeight){
+        requestAnimationFrame(() => openAnimation()); // Call drawHexGrid again for the next frame
+    }
+}
+openAnimation();
 drawHexGrid(0, 0);

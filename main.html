@@ -8,23 +8,28 @@
     <link rel="stylesheet" type="text/css" href="resources/css/homepage.css" />
 </head>
 <body>
+    <canvas id="hex_canvas"></canvas>
+    <canvas id="mouse_canvas"></canvas>
+
     <div id = "header">
-        <div class = "headerDivs">
-            <h2 >
-                Home
-            </h2>
-        </div>
-        <div class = "headerDivs">
+        <div class = "headerDivs" id="home_button">
+                <a>
+                    <h2 >
+                        Home
+                    </h2>
+                </a>
+            </div>
+        <div class = "headerDivs" id = "projects_button">
             <h2 class>
                 Projects
             </h2>
         </div>
-        <div class = "headerDivs">
+        <div class = "headerDivs" id = "resume_button">
             <h2>
                 Resume
             </h2>
         </div>
-        <div class = "headerDivs">
+        <div class = "headerDivs" id = "about_me_button">
             <h2>
                 About me
             </h2>
@@ -32,9 +37,11 @@
 
         <div class = "headerDivs" id = "contactDiv">
             <h2>Contact:</h2>
-            <img src="https://avatars.slack-edge.com/2020-11-25/1527503386626_319578f21381f9641cd8_512.png" class = "icon">
-            <img src="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI=w240-h480-rw" class="icon">
-            <img src="https://pbs.twimg.com/profile_images/1661161645857710081/6WtDIesg_400x400.png" class="icon">
+            <a src = >
+                <img src="https://avatars.slack-edge.com/2020-11-25/1527503386626_319578f21381f9641cd8_512.png" class = "icon">
+            </a>
+                <img src="https://play-lh.googleusercontent.com/KSuaRLiI_FlDP8cM4MzJ23ml3og5Hxb9AapaGTMZ2GgR103mvJ3AAnoOFz1yheeQBBI=w240-h480-rw" class="icon">
+                <img src="https://pbs.twimg.com/profile_images/1661161645857710081/6WtDIesg_400x400.png" class="icon">
         </div>
     </div>
     <div id = "name_padding">
@@ -55,7 +62,8 @@
         <h4>Jordan Day 🡸 Umass Web Ring 🡺 Haylin Moore</h4>
         <h3></h3>
     </div>
-    
+    <script src="hexagons.js"></script>
+    <script src="button.js"></script>
     
 </body>
 </html>
