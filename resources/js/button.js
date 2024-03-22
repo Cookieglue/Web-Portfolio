@@ -14,7 +14,7 @@ projectsButton.addEventListener("click", function() {
 });
 
 resumeButton.addEventListener("click", function() {
-    window.location.href = "test.html";
+    window.location.href = "resume.html";
 });
 
 aboutMeButton.addEventListener("click", function() {
