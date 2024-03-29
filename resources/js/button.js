@@ -6,7 +6,7 @@ let aboutMeButton = document.getElementById("about_me_button");
 
 // Add onclick event listeners
 homeButton.addEventListener("click", function() {
-    window.location.href = "main.html"; 
+    window.location.href = "index.html"; 
 });
 
 projectsButton.addEventListener("click", function() {

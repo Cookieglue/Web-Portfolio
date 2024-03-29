@@ -138,14 +138,18 @@ function openAnimation(){
             let dist = Math.abs(y-wavePos);
             let saturation = 1 - dist*cutoffRate*0.1;
             if(saturation > 1)saturation = 1;
-            
-            lifeList[x][y] = saturation
+            if(lifeList[x][y] != undefined){
+                lifeList[x][y] = Math.max(lifeList[x][y],saturation)
+            }
+            else{
+                lifeList[x][y] = saturation
+            }
             
 
         }
     }
     wavePos+= 2/hexSide;
-    if(wavePos<pageHeight){
+    if(wavePos<20){
         requestAnimationFrame(() => openAnimation()); // Call drawHexGrid again for the next frame
     }
 }
