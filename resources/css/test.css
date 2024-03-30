@@ -17,8 +17,9 @@ body{
 
 #hex-grid{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  width: calc(var(--hexWidth)*2.8 + 6*var(--margin));
+  width: calc(var(--scaleWidth)*2 + 6*var(--margin));
   gap:0;
 }
 

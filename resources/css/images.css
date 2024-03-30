@@ -2,3 +2,34 @@
     background-image: url(/resources/images/pumpkins_accelerated.png);
     background-size: cover;
 }
+#cpu{
+    background-image: url(/resources/images/cpu2.gif);
+    background-size: cover;
+}
+#core{
+    background-image: url(/resources/images/core.jpg);
+    background-size: cover;
+}
+#shader-toy{
+    background-image: url(/resources/images/shaderToy.png);
+    background-size: cover;
+}
+#shader-toy:hover{
+    background-image: url(/resources/images/shaderToy.gif);
+}
+#soda-steal{
+    background-image: url(/resources/images/sodaStealCrop.jpg);
+    background-size: cover;
+}
+#rbct{
+    background-image: url(/resources/images/rbctIcon.png);
+    background-size: cover;
+}
+#bees{
+    background-image: url(/resources/images/bees.gif);
+    background-size: cover;
+}
+#woodworking{
+    background-image: url(/resources/images/woodworking.jpg);
+    background-size: cover;
+}
