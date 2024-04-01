@@ -2,15 +2,16 @@ const lifeList = [[]];
 const decayRate = 0.01; // Adjust the decay rate as needed
 const cutoffRate = 2; //Cutoff for hexagon decay
 const initialLife = 0; // Initial life value for hexagons
-var minLife = 0.4;
+var minLife = 0.5;
 
 var canvas = document.getElementById("hex_canvas");
-var mouseCanvas = document.getElementById("mouse_canvas");
 var header = document.getElementById("header");
 
 //offset to not overlap the header
 var headerOffset = header.offsetHeight;
 var pageHeight = document.body.offsetHeight - headerOffset;
+
+var projectHex = document.getElementsByClassName('hexGrow')[0];
 
 var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -24,12 +25,6 @@ let mouseY = 10000;
 let scroll = -headerOffset;
 
 setScreen();
-
-//main page vs projects page
-mouseCanvas.addEventListener('mousemove', function(event) {
-    mouseX = event.clientX;
-    mouseY = event.clientY + scroll;
-});
 
 window.addEventListener("scroll", (event) => {
     scroll = this.scrollY - headerOffset;
@@ -48,11 +43,7 @@ window.addEventListener('resize', function(event) {
 function setScreen(){
     //offset to not overlap header
     headerOffset = header.offsetHeight;
-    pageHeight = document.body.offsetHeight - headerOffset;
-    if (mouseCanvas != null){
-        mouseCanvas.style.top = headerOffset+ "px";
-        mouseCanvas.style.height = pageHeight + "px";
-    }
+    pageHeight = document.body.offsetHeight - headerOffset + projectHex.offsetHeight;
     canvas.style.top = headerOffset+ "px";
     canvas.style.height = pageHeight + "px";
 
