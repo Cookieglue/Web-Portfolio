@@ -6,8 +6,13 @@
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="resources/css/styles.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/projects.css" />
+
+    <link rel="stylesheet" type="text/css" href="resources/css/hexgrid.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/images.css" />
 </head>
 <body>
+    <canvas id="hex_canvas"></canvas>
+
     <div id = "header">
         <div class = "headerDivs" id="home_button">
                 <a>
@@ -46,35 +51,68 @@
         </div>
     </div>
     
-    <div>
+    <div id = 'title'>
         <h1>Projects</h1>
     </div>
-
-    <div class = "projectBox">
-        <div class ="offsetLeft">
-            <h1>Top Picks</h1>
-        </div>
-        <div class = "projectGrid">
-            <div class = "projectItem"> </div>
-                
-            <div class = "projectItem"> </div>
-                
-            <div class = "projectItem"></div>
-
-            <div class = "projectItem"></div>
-            <div class = "projectItem"></div>
-            <div class = "projectItem"></div>
-            <div class = "projectItem"></div>
-            <div class = "projectItem"></div>
-            <div class = "projectItem"></div>
-            <div class = "projectItem"></div>
-            <div class = "projectItem"></div>
-            <div class = "projectItem"></div>
-            
-
+    <div id = 'hex-grid-center'>
+        <div id="hex-grid">
+            <div class = 'hexGrow'>
+                <div id ='core'>
+                    <p>Magnetic Core Memory</p>
+                </div>
+            </div>
+            <div class = 'hexGrow'>
+                <div id = 'cpu'>
+                    <p>8-bit CPU</p>
+                </div>
+            </div>
+            <div class="hexGrow">
+                <div id="shader-toy">
+                    <p>Fragment Shaders</p>
+                </div>
+            </div>
+        
+            <div class="hexGrow">
+                <div id="soda-steal">
+                    <p>Operation Soda Steal</p>
+                </div>
+            </div>
+        
+            <div class="hexGrow">
+                <div id="rbct">
+                    <p>Run Ball Chicken Tournament</p>
+                </div>
+            </div>
+        
+            <div class="hexGrow">
+                <div id="bees">
+                    <p>Beekeeping</p>
+                </div>
+            </div>
+        
+            <div class="hexGrow">
+                <div id="pumpkins-accelerated">
+                    <p>Pumpkins Accelerated</p>
+                </div>
+            </div>
+        
+            <div class="hexGrow">
+                <div id="woodworking">
+                    <p>Woodworking</p>
+                </div>
+            </div>
+            <div class = 'hexGrow'>
+                <div id = 'website-code'>
+                    <p>Website Source Code</p>
+                </div>
+            </div>
+            <div class = 'hexGrow'></div>
+            <div class = 'hexGrow'></div>
+            <div class = 'hexGrow'></div>
         </div>
     </div>
 
     <script src="resources/js/button.js"></script>
+    <script src="resources/js/hexagons.js"></script>
 </body>
 </html>

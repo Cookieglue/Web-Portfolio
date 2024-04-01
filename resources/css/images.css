@@ -1,10 +1,13 @@
 #pumpkins-accelerated{
-    background-image: url(/resources/images/pumpkins_accelerated.png);
+    background-image: url(/resources/images/pumpkin.png);
     background-size: cover;
 }
 #cpu{
-    background-image: url(/resources/images/cpu2.gif);
+    background-image: url(/resources/images/cpu.png);
     background-size: cover;
+}
+#cpu:hover{
+    background-image: url(/resources/images/cpu2.gif);
 }
 #core{
     background-image: url(/resources/images/core.jpg);
@@ -33,3 +36,12 @@
     background-image: url(/resources/images/woodworking.jpg);
     background-size: cover;
 }
+#website-code{
+    background-image: url(/resources/images/sourcecode.png);
+    background-size: cover;
+}
+
+body::after{
+    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+    content:url(/resources/images/shaderToy.gif) url(/resources/images/cpu2.gif)
+ }

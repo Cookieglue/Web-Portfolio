@@ -1,0 +1,88 @@
+:root{
+  --hexWidth: 15vw;
+  --hexHeight: calc(var(--hexWidth)*0.866);
+  --margin:2vw;
+  --gridWidth:50%;
+  --scale: 1.2;
+  --scaleWidth: calc(var(--hexWidth)*var(--scale));
+  --scaleHeight: calc(var(--hexHeight)*var(--scale));
+  --offset: calc(var(--hexHeight)/2 + 2*var(--margin));
+
+  --sat1: #F9F5E0;
+  --sat2: #F8E3CA;
+  --sat3: #F8D1B4;
+  --sat4: #F7BF9E;
+  --sat42:#F7BB9A;
+  --sat44:#F7B895;
+  --sat5: #F6AD88;
+  --sat6: #F69B72;
+  --sat7: #F5895C;
+}
+#hex-grid-center{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+#hex-grid{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: calc(var(--scaleWidth)*2 + 6*var(--margin));
+  gap:0;
+}
+
+#hex-grid div{
+  background-color: var(--sat44);
+
+  width: var(--hexWidth);
+  height: var(--hexHeight);
+  margin: var(--margin);
+  margin-left: calc(var(--margin) - var(--hexWidth)/8);
+  margin-right: calc(var(--margin) - var(--hexWidth)/8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transition: 0.3s;
+
+} 
+#hex-grid div div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  clip-path: polygon(28% 5%, 72% 5%, 95% 50%, 72% 95%, 28% 95%, 5% 50%);
+  transform: scale(1.02);
+
+}
+.hexGrow:hover{
+
+  transform: scale(var(--scale));
+
+} 
+#hex-grid div p{
+  
+  font-size: x-large;
+  color:white;
+  background-color: rgba(0,0,0,0.4);
+  padding: 0.3vh;
+  border-radius: 0.5em;
+
+  width: 75%;
+  text-align: center;
+} 
+#hex-grid div:nth-child(3n+2) {
+  margin-top: calc(var(--offset));
+  margin-bottom: calc(var(--offset)*-1);
+}
+
+@media only screen and (max-width: 767px) {
+  
+  :root{
+    --hexWidth:25vw;
+  }
+
+}

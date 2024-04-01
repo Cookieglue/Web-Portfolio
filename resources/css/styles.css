@@ -1,28 +1,33 @@
 :root{
     --sat1: #F9F5E0;
     --sat2: #F8E3CA;
+    --sat22:#F8DCC1;
+    --sat24:#F8D5B8;
     --sat3: #F8D1B4;
     --sat4: #F7BF9E;
+    --sat42:#F7BB9A;
+    --sat44:#F7B895;
     --sat5: #F6AD88;
     --sat6: #F69B72;
     --sat7: #F5895C;
+    --boldness: 0.00em;
 }
-
+@font-face {
+    font-family: honeycomb;
+    src: url(/resources/honeycomb_fontfamily/Signika-VariableFont_GRAD\,wght.ttf);
+}
 
 body{
     padding: 0;
     margin: 0;
 
     background-color: var(--sat2);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: honeycomb;
 }
 div{
     display: flex;
     justify-content: center;
     align-content: center;
-}
-h2{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #header{
     height: 7vh;
@@ -40,7 +45,7 @@ h2{
     border-style: solid;
     border-width: 10px;
     border-color: var(--sat1);
-    border-bottom-color:var(--sat4);
+    border-bottom-color:var(--sat42);
     
     
 }
@@ -52,16 +57,18 @@ h2{
 
     margin: 1em;
     padding: 1em;
-    font-family: sans-serif;
+    border-radius: 1em;
     justify-content: center;
     align-items: center;
-    transition: 0.2s;
+    transition: 0.3s;
+    transform: scale(1);
+
 
     user-select: none;
 }
 .headerDivs:hover{
-    background-color:var(--sat2) ;
-    border-radius: 1em;
+    background-color:var(--sat24) ;
+    transform: scale(1.05);
 }
 #contactDiv{
     grid-column: 6/8;
@@ -86,6 +93,18 @@ h2{
 .icon:hover{
     border-style: solid;
     border-color: var(--sat4);
+}
+canvas{
+    position: absolute;
+    top:0; left: 0;
+    width: 100%;
+    height:130vh
+}
+#mouse_canvas{
+    z-index: 100;
+}
+#hex_canvas{
+    z-index: -1;
 }
 
 @media only screen and (max-width: 1200px) {

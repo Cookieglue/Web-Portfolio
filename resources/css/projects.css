@@ -12,6 +12,9 @@
     --m: 4px;    /* margin */
     --f: calc(var(--s) * 1.732 + 4 * var(--m) - 1px); 
   }
+#title{
+    margin-bottom: -3em;
+}
 .projectBox{
 
     display: flex;
