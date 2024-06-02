@@ -2,7 +2,7 @@ const lifeList = [[]];
 const decayRate = 0.01; // Adjust the decay rate as needed
 const cutoffRate = 2; //Cutoff for hexagon decay
 const initialLife = 0; // Initial life value for hexagons
-var minLife = 0.4;
+var minLife = 0;
 
 var canvas = document.getElementById("hex_canvas");
 var mouseCanvas = document.getElementById("mouse_canvas");
@@ -66,7 +66,7 @@ function setScreen(){
 function drawHexagon(x, y, life) {
     if (life <= 0) return;
     // x, y is center
-    ctx.strokeStyle = colorInterpolate('#F9F5E0', '#F7B895', life);
+    ctx.strokeStyle = colorInterpolate('#F8E7CE', '#F7B895', life);
     ctx.lineWidth = hexSide/20;
     ctx.beginPath();
     ctx.moveTo(x - hexSide / 2, y + hexSide * 0.866);

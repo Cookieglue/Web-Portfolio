@@ -1,5 +1,9 @@
 :root{
+    
     --sat1: #F9F5E0;
+    --sat14:#F9EED7;
+    --sat16:#F8EAD3;
+    --sat18:#F8E7CE;
     --sat2: #F8E3CA;
     --sat22:#F8DCC1;
     --sat24:#F8D5B8;
@@ -21,7 +25,7 @@ body{
     padding: 0;
     margin: 0;
 
-    background-color: var(--sat2);
+    background-color: var(--sat18);
     font-family: honeycomb;
 }
 div{
@@ -45,7 +49,7 @@ div{
     border-style: solid;
     border-width: 10px;
     border-color: var(--sat1);
-    border-bottom-color:var(--sat42);
+    border-bottom-color:var(--sat4);
     
     
 }

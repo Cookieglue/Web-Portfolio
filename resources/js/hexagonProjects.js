@@ -57,7 +57,9 @@ function setScreen(){
 function drawHexagon(x, y, life) {
     if (life <= 0) return;
     // x, y is center
-    ctx.strokeStyle = colorInterpolate('#F9F5E0', '#F7B895', life);
+    //low: #F8E7CE
+    //hi: #F7B895
+    ctx.strokeStyle = colorInterpolate('#F8EAD3', '#F7B895', life);
     ctx.lineWidth = hexSide/20;
     ctx.beginPath();
     ctx.moveTo(x - hexSide / 2, y + hexSide * 0.866);

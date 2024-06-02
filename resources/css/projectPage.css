@@ -1,0 +1,28 @@
+.center-div{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.center-div div{
+    width: 45vw;
+    min-width: 400px;
+    margin-top: 5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction:column;
+}
+
+.center-div div h1{
+    width: 100%;
+}
+
+.img-left{
+    width: 50%;
+    margin-right: 50%;
+}

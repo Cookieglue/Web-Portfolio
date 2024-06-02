@@ -14,9 +14,10 @@ projectsButton.addEventListener("click", function() {
 });
 
 resumeButton.addEventListener("click", function() {
-    window.location.href = "resume.html";
+    window.location.href = "resources/misc/resume.pdf";
 });
 
 aboutMeButton.addEventListener("click", function() {
     window.location.href = "about.html";
 });
+

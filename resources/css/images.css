@@ -21,7 +21,7 @@
     background-image: url(/resources/images/shaderToy.gif);
 }
 #soda-steal{
-    background-image: url(/resources/images/sodaStealCrop.jpg);
+    background-image: url(/resources/images/sodaStealClipart.jpg);
     background-size: cover;
 }
 #rbct{
@@ -31,16 +31,34 @@
 #bees{
     background-image: url(/resources/images/bees.gif);
     background-size: cover;
+    background-position: 0 0;
 }
 #woodworking{
-    background-image: url(/resources/images/woodworking.jpg);
+    background-image: url(/resources/images/catBowl.jpg);
     background-size: cover;
 }
 #website-code{
     background-image: url(/resources/images/sourcecode.png);
     background-size: cover;
 }
-
+#multiply{
+    background-image: url(/resources/images/multiplySq.png);
+    background-size: cover;
+}
+#multiply:hover{
+    background-image: url(/resources/images/multiply.gif);
+}
+#makerspace{
+    background-image: url(/resources/images/umams.png);
+    background-size: cover;
+}
+#ac-motor{
+    background-image: url(/resources/images/motorKhan.png);
+    background-size: cover;
+}
+#ac-motor:hover{
+    background-image: url(/resources/images/motor.gif);
+}
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
     content:url(/resources/images/shaderToy.gif) url(/resources/images/cpu2.gif)

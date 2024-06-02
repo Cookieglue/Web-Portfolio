@@ -1,5 +1,5 @@
 :root{
-  --hexWidth: 15vw;
+  --hexWidth: 16vw;
   --hexHeight: calc(var(--hexWidth)*0.866);
   --margin:2vw;
   --gridWidth:50%;
@@ -54,8 +54,9 @@
   justify-content: center;
   align-items: center;
   justify-items: center;
-  clip-path: polygon(28% 5%, 72% 5%, 95% 50%, 72% 95%, 28% 95%, 5% 50%);
-  transform: scale(1.02);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transform: scale(0.92);
+  background-position: center; 
 
 }
 .hexGrow:hover{
