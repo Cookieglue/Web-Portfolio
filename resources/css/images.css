@@ -1,65 +1,65 @@
 #pumpkins-accelerated{
-    background-image: url(../resources/images/pumpkin.png);
+    background-image: url(./resources/images/pumpkin.png);
     background-size: cover;
 }
 #cpu{
-    background-image: url(../resources/images/cpu.png);
+    background-image: url(./resources/images/cpu.png);
     background-size: cover;
 }
 #cpu:hover{
-    background-image: url(../resources/images/cpu2.gif);
+    background-image: url(./resources/images/cpu2.gif);
 }
 #core{
-    background-image: url(../resources/images/core.jpg);
+    background-image: url(./resources/images/core.jpg);
     background-size: cover;
 }
 #shader-toy{
-    background-image: url(../resources/images/shaderToy.png);
+    background-image: url(./resources/images/shaderToy.png);
     background-size: cover;
 }
 #shader-toy:hover{
-    background-image: url(../resources/images/shaderToy.gif);
+    background-image: url(./resources/images/shaderToy.gif);
 }
 #soda-steal{
-    background-image: url(../resources/images/sodaStealClipart.jpg);
+    background-image: url(./resources/images/sodaStealClipart.jpg);
     background-size: cover;
 }
 #rbct{
-    background-image: url(../resources/images/rbctIcon.png);
+    background-image: url(./resources/images/rbctIcon.png);
     background-size: cover;
 }
 #bees{
-    background-image: url(../resources/images/bees.gif);
+    background-image: url(./resources/images/bees.gif);
     background-size: cover;
     background-position: 0 0;
 }
 #woodworking{
-    background-image: url(../resources/images/catBowl.jpg);
+    background-image: url(./resources/images/catBowl.jpg);
     background-size: cover;
 }
 #website-code{
-    background-image: url(../resources/images/sourcecode.png);
+    background-image: url(./resources/images/sourcecode.png);
     background-size: cover;
 }
 #multiply{
-    background-image: url(../resources/images/multiplySq.png);
+    background-image: url(./resources/images/multiplySq.png);
     background-size: cover;
 }
 #multiply:hover{
     background-image: url(../resources/images/multiply.gif);
 }
 #makerspace{
-    background-image: url(../resources/images/umams.png);
+    background-image: url(./resources/images/umams.png);
     background-size: cover;
 }
 #ac-motor{
-    background-image: url(../resources/images/motorKhan.png);
+    background-image: url(./resources/images/motorKhan.png);
     background-size: cover;
 }
 #ac-motor:hover{
-    background-image: url(../resources/images/motor.gif);
+    background-image: url(./resources/images/motor.gif);
 }
 body::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-    content:url(../resources/images/shaderToy.gif) url(../resources/images/cpu2.gif)
+    content:url(./resources/images/shaderToy.gif) url(./resources/images/cpu2.gif)
 }
