@@ -1,5 +1,5 @@
 #pumpkins-accelerated{
-    background-image: url(..`/images/pumpkin.png);
+    background-image: url(../images/pumpkin.png);
     background-size: cover;
 }
 #cpu{
@@ -46,7 +46,7 @@
     background-size: cover;
 }
 #multiply:hover{
-    background-image: url(../resources/images/multiply.gif);
+    background-image: url(../images/multiply.gif);
 }
 #makerspace{
     background-image: url(../images/umams.png);
