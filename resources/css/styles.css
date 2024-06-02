@@ -18,7 +18,7 @@
 }
 @font-face {
     font-family: honeycomb;
-    src: url(/resources/honeycomb_fontfamily/Signika-VariableFont_GRAD\,wght.ttf);
+    src: url(../honeycomb_fontfamily/signika-variablefont.ttf);
 }
 
 body{
