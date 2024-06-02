@@ -1,5 +1,5 @@
 #pumpkins-accelerated{
-    background-image: url(./resources/images/pumpkin.png);
+    background-image: url(../images/pumpkin.png);
     background-size: cover;
 }
 #cpu{
@@ -38,7 +38,7 @@
     background-size: cover;
 }
 #website-code{
-    background-image: url(./resources/images/sourcecode.png);
+    background-image: url(../images/sourcecode.png);
     background-size: cover;
 }
 #multiply{
