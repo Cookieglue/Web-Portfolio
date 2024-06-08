@@ -44,9 +44,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-content: center;
     flex-direction: column;
     
 }
 #web_ring h4{
     margin: 5px;
+}
+#umaring{
+    z-index: 101;
 }
