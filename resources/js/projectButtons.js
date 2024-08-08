@@ -14,5 +14,5 @@ document.getElementById("rbct").parentElement.addEventListener("click", function
     window.location.href = "https://marii3.itch.io/rbct"; 
 });
 document.getElementById("cpu").parentElement.addEventListener("click", function() {
-    window.location.href = "cpu.html"; 
+    window.location.href = "resources/projects/cpu.html"; 
 });
