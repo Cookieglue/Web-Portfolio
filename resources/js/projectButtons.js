@@ -2,7 +2,7 @@ document.getElementById("website-code").parentElement.addEventListener("click", 
     window.location.href = "https://github.com/Cookieglue/Web-Portfolio"; 
 });
 document.getElementById("shader-toy").parentElement.addEventListener("click", function() {
-    window.location.href = "https://www.shadertoy.com/profile/?show=shaders"; 
+    window.location.href = "https://www.shadertoy.com/user/maripoza"; 
 });
 document.getElementById("pumpkins-accelerated").parentElement.addEventListener("click", function() {
     window.location.href = "https://modrinth.com/mod/more-pumpkins!"; 
