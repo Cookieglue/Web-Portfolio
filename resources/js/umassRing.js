@@ -16,10 +16,14 @@ function initializeWebring() {
             return;
           }
   
+          fetch("https://umaring.mkr.cx/mari").then(res=>res.json()).then((ring)=>{
+          const prev = ring.prev;
+          const next = ring.next;
           document.getElementById("umaring_prev").href = prev.url;
           document.getElementById("umaring_prev").firstChild.textContent = prev.name;
           document.getElementById("umaring_next").href = next.url;
           document.getElementById("umaring_next").firstChild.textContent = next.name;
+      })
           break;
         default:
           const webringContainer = document.getElementById("umaring");
