@@ -1,7 +1,5 @@
 function initializeWebring() {
     try {
-      const data = {"prev":{"id":"hampton","name":"Haylin Moore","url":"https://haylinmoore.com"},"member":{"id":"mari","name":"Mari Braun","url":"https://beemari.com"},"next":{"id":"rpil","name":"Roland Pilenyi","url":"https://rpil.dev"}};
-      const { prev, next } = data;
   
       const mode = "link";
       switch (mode) {
