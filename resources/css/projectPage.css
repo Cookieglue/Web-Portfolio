@@ -22,11 +22,22 @@
     width: 100%;
 }
 
-.img-left{
-    width: 50%;
-    margin-right: 50%;
+.text-container {
+    display: flex !important;
+    align-items: flex-start !important; /* Aligns items at the top */
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 20px; /* Adds spacing between image and text */
+    max-width: 70vw; /* Ensures it doesn’t stretch too wide */
 }
-#img1{
-    float: left;
-    width:50%;
+
+.img-right {
+    width: 40%; /* Adjust size as needed */
+    max-width: 350px; /* Prevents the image from being too large */
+    float: right;
+}
+
+.text-container p {
+    flex: 1; /* Allows text to take up remaining space */
+    text-align: justify;
 }
